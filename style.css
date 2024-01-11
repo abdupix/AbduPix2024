@@ -11,14 +11,16 @@
     --dark-blue: #20384F;
     --br: 10px;
     --white: #fff;
+
   }
   
   body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     overflow-x: hidden;
     background-color: darkgray;
     
   }
+
  .nav-container, .nav-links, .logo{
     display: flex;
     flex-direction: row;
@@ -43,6 +45,8 @@
     }
     .nav-container a, .nav-container p{
         color:var(--white);
+        margin:0;
+        text-decoration: none;
     }
     .nav-links{
         padding-left: 20%;
@@ -64,4 +68,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bolder;
   }
