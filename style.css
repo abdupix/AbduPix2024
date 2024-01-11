@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #000;
+    --dark-blue: #20384F;
+    --br: 10px;
+    --white: #fff;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    background-color: darkgray;
+    
+  }
+ .nav-container, .nav-links, .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+  }
+/* style for transparent nav bar in container called nav-container */
+    .nav-container {
+        position: fixed;
+        height: 10vh;
+        background-color: transparent;
+        z-index: 1;
+        align-items: center;
+        padding: 0 2%;
+        margin:1%;
+        border-radius: var(--br);
+        backdrop-filter: blur(20px);
+        outline: rgba(255,255,255, 0.2) 1px solid;
+        justify-content: space-between;
+        box-shadow:  0px 0px 25px 5px rgba(0,0,0,0.2);
+    }
+    .nav-container a, .nav-container p{
+        color:var(--white);
+    }
+    .nav-links{
+        padding-left: 20%;
+        padding-right:120px
+    }
+  
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  
+  .star-text {
+    position: fixed;
+    z-index: 2;
+    color: white;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
