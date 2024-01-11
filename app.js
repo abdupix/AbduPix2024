@@ -20,33 +20,34 @@ for (let i = 0; i < frameCount; i++) {
 gsap.to(ball, {
   frame: frameCount - 1,
   snap: "frame",
-  ease: 1,
+  ease: "none",
   scrollTrigger: {
     scrub: true,
     pin: "canvas",
-    end: "200%",
+    end: "150%",
+    // markers: true,
   },
   onUpdate: render,
 });
 
-// gsap.fromTo(
-//   ".star-text",
-//   {
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     scrollTrigger: {
-//       scrub: 1,
-//       start: "0%",
-//       end: "30%",
+gsap.fromTo(
+  ".star-text",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+      start: "0%",
+      end: "30%",
  
-//     },
-//     onComplete: () => {
-//       gsap.to(".star-text", { opacity: 0 });
-//     },
-//   }
-// );
+    },
+    onComplete: () => {
+      gsap.to(".star-text", { opacity: 0 });
+    },
+  }
+);
 
 images[0].onload = render;
 
